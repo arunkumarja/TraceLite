@@ -1843,3 +1843,271 @@
       font-size: 12px;
     }
   }
+
+
+
+  /* =========================================================
+   PERFORMANCE ANALYZER
+   ========================================================= */
+
+.performance-analysis {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.performance-analysis h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.analysis-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.analysis-card {
+  min-width: 0;
+  padding: 20px;
+
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  );
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #93c5fd;
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+}
+
+.analysis-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.analysis-card strong {
+  display: block;
+
+  color: #2563eb;
+
+  font-size: 24px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   CHARTS
+   ========================================================= */
+
+.charts-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.chart-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border: 1px solid #dbe4f0;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.chart-card h3 {
+  margin: 0 0 16px;
+
+  color: #1e293b;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.chart-card p {
+  color: #64748b;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading-message {
+  padding: 24px;
+
+  border: 1px dashed #93c5fd;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error-message {
+  margin-bottom: 24px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   GLOBAL SCROLLBAR
+   ========================================================= */
+
+.app-content::-webkit-scrollbar {
+  width: 9px;
+}
+
+.app-content::-webkit-scrollbar-track {
+  background: #eef2f7;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+
+  border-radius: 20px;
+
+  border: 2px solid #eef2f7;
+}
+
+.app-content::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* =========================================================
+   TABLE SCROLLBAR
+   ========================================================= */
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #64748b;
+
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* =========================================================
+   FIREFOX SCROLLBARS
+   ========================================================= */
+
+.app-content {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #94a3b8
+    #eef2f7;
+}
+
+.table-container {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #64748b
+    #f1f5f9;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .top-navigation {
+    padding: 12px 20px;
+
+    gap: 14px;
+  }
+
+  .navigation-brand {
+    min-width: 190px;
+  }
+
+  .navigation-links {
+    gap: 2px;
+  }
+
+  .navigation-links button {
+    padding: 9px 10px;
+
+    font-size: 12px;
+  }
+
+  .app-content {
+    padding: 24px;
+  }
+
+  .metrics-grid {
+    gap: 14px;
+  }
+
+  .analysis-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-summary {
+    grid-template-columns: 1fr;
+  }
+}
